@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+
+/*
+ * Header (APP-BAR)
+ *
+ */
+
+.appbar {
+    min-height: 50px;
+    transition: min-height 0.3s;
+}
+
+/* .appbar__inner {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.appbar__brand {
+    font-weight: 300;
+    font-size: 3.7em;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+    color: #424242;
+}
+
+.appbar__menu {
+    font-size: 32px;
+    display: block;
+    margin: 10px auto;
+    width: 5%;
+}
+
+/*
+ * Navbar
+ */
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: #424242;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #000;
+}

@@ -1,0 +1,64 @@
+@media screen and (max-width: 499px) {
+    .appbar__inner {
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #drawer {
+        width: 300px;
+        background-color: #bce6eb;
+        /* height: 100%; */
+        position: absolute;
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+        transition: transform 0.3s ease;
+    }
+
+    #drawer.open {
+        transform: translate(0,0);
+    }
+
+    .nav__item {
+        display: list-item;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .appbar {
+        background-color: white;
+        padding: 16px 24px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    .appbar__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+    }
+
+    nav ul > li {
+        display: inline;
+    }
+
+    nav ul > li > a {
+        display: inline-block;
+        padding: 1em;
+    }
+}
