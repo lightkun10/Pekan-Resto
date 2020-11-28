@@ -124,3 +124,21 @@ body {
     font-size: 18px;
     font-weight: 300;
 }
+
+
+/*
+ * main
+ *
+ */
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+ * Restaurants
+ */
+.restaurants {
+    margin: 32px auto auto;
+    text-align: left;
+}

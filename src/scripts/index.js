@@ -1,13 +1,13 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
 import "../styles/responsive.css";
+import { HamburgerBtn } from "./hamburgerBtn";
+import { Doms } from "./doms";
 
 console.log('Hello Coders! :)');
 
-const hamburgerBtn = document.querySelector("#hamburger");
-const drawer = document.querySelector("#drawer");
+Doms
 
-hamburgerBtn.addEventListener("click", e => {
-    drawer.classList.toggle("open");
-    e.stopPropagation();
-});
+HamburgerBtn.btnSet();
+
+Doms.displayRestaurants();
