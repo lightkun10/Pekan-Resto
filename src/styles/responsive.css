@@ -1,3 +1,8 @@
+.restaurants {
+    display: grid;
+    row-gap: 10px;
+}
+
 @media screen and (max-width: 499px) {
     .appbar__inner {
         width: 100%;
@@ -60,5 +65,34 @@
     nav ul > li > a {
         display: inline-block;
         padding: 1em;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .restaurant-item__thumbnail {
+        /* 388 × 258 pixels (intrinsic: 810 × 540 pixels) */
+        width: 388px;
+        height: 258px;
+    }
+
+    .restaurant-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .restaurant-item__name {
+        font-size: 20px;
+    }
+
+    .restaurant-item__description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .restaurants {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 15px;
     }
 }
