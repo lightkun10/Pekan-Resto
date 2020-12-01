@@ -16,19 +16,19 @@ const Doms = (function() {
                 
                 let restoCont = document.createElement("div");
                 restoCont.className = "restaurant-item__content";
+                    let restoRating = document.createElement("p");
+                    restoRating.className = "restaurant-item__rating";
+                    restoRating.textContent = `Rating: ${restaurant["rating"]} / 5`;
                     let restoName = document.createElement("h1");
                     restoName.className = "restaurant-item__name";
                     restoName.textContent = restaurant["name"];
                     let restoCity = document.createElement("p");
                     restoCity.className = "restaurant-item__city";
-                    restoCity.textContent = restaurant["city"];
+                    restoCity.textContent = `${restaurant["city"]}`;
                     let restoDesc = document.createElement("p");
                     restoDesc.className = "restaurant-item__description";
                     restoDesc.textContent = restaurant["description"];
-                    let restoRating = document.createElement("p");
-                    restoRating.className = "restaurant-item__rating";
-                    restoRating.textContent = `${restaurant["rating"]} / 5`;
-                restoCont.append(restoName, restoCity, restoDesc, restoRating);
+                restoCont.append(restoRating, restoName, restoCity, restoDesc);
 
                 restoItem.append(restoImg, restoCont);
     

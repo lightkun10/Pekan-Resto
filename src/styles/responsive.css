@@ -12,7 +12,7 @@
     }
 
     #drawer {
-        width: 500px;
+        width: 100%;
         background-color: #4e89ae;
         /* height: 100%; */
         position: absolute;
@@ -27,8 +27,27 @@
 
     .nav__item {
         display: list-item;
+        list-style-type: none;
         width: 100%;
-        text-align: left;
+        text-align: center;
+    }
+
+    .restaurant-item {
+        font-size: 1.2em;
+    }
+
+    .restaurant-item__name {
+        font-size: 2.2em;
+    }
+
+    .restaurant-item__city {
+        font-size: 1.4em;
+    }
+
+    .restaurant-item__description {
+        margin-top: 1.2em;
+        font-size: 18px;
+        line-height: 1.6em;
     }
 }
 
@@ -52,39 +71,59 @@
         display: none;
     }
 
-    nav {
+    .nav__list {
         display: flex;
-        align-self: center;
-        justify-content: flex-end;
+        justify-content: flex-start
     }
 
-    nav ul > li {
+    .nav__item ul > li {
         display: inline;
     }
 
-    nav ul > li > a {
-        display: inline-block;
-        padding: 1em;
+    .nav a {
+        font-size: 1em;
+    }
+
+    .restaurant-item {
+        font-size: 1.2em;
+    }
+
+    .restaurant-item__name {
+        font-size: 2.2em;
+    }
+
+    .restaurant-item__city {
+        font-size: 1.4em;
+    }
+
+    .restaurant-item__description {
+        margin-top: 1.2em;
+        font-size: 18px;
+        line-height: 1.6em;
     }
 }
 
 @media screen and (min-width: 650px) {
     .restaurant-item__thumbnail {
-        /* 388 × 258 pixels (intrinsic: 810 × 540 pixels) */
-        width: 388px;
-        height: 258px;
+        padding: 1em;
     }
 
-    .restaurant-item__content {
-        padding: 16px 32px 32px 32px;
+    .restaurant-item {
+        font-size: 1.2em;
     }
 
     .restaurant-item__name {
-        font-size: 20px;
+        font-size: 2.2em;
+    }
+
+    .restaurant-item__city {
+        font-size: 1.4em;
     }
 
     .restaurant-item__description {
-        font-size: 16px;
+        margin-top: 1.2em;
+        font-size: 17px;
+        line-height: 1.6em;
     }
 }
 
@@ -92,7 +131,15 @@
     .restaurants {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 20px;
+        column-gap: 30px;
         row-gap: 15px;
+    }
+
+    
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
     }
 }

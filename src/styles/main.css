@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -18,9 +20,8 @@ body, html {
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #424242;
-    /* background-color: #ffa372; */
 }
 
 /*
@@ -33,63 +34,43 @@ body {
     transition: min-height 0.3s;
 }
 
-/* .appbar__inner {
-    width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
 .appbar__brand {
-    font-weight: 300;
-    font-size: 4em;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3.5em;
     margin: 0.5em 0.25em;
     display: inline-block;
     color: #424242;
 }
 
 .appbar__menu {
-    font-size: 32px;
+    font-size: 46px;
     display: block;
     margin: 10px auto;
-    width: 5%;
+    width: 46px;
 }
 
 /*
  * Navbar
  */
 .nav {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav__list {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav__item {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 15%;
-    text-align: center;
-    line-height: 24px;
-    text-transform: uppercase;
+    display: inline;
 }
 
 .nav a {
     font-size: 1.2em;
     display: inline-block;
     padding: 1.3em;
-    text-decoration: none;
-    color: #424242;
+    color: black;
 }
 
 .nav a:hover {
-    text-decoration: underline;
     color: #000;
     background-color: #4e89ae;
 }
@@ -104,10 +85,9 @@ body {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    /* background-image: url("../public/images/heros/hero-image_2.jpg"); */
     background-image: url("../public/images/heros/hero-image_4.jpg");
+    alt: "Pekan Resto's Description";
     background-position: center;
-    /* background-color: green; */
 }
 
 .hero__inner {
@@ -142,7 +122,7 @@ main {
  * Restaurants
  */
 .restaurants {
-    margin: 32px auto auto;
+    margin: 32px 1em auto;
     text-align: left;
 }
 
@@ -164,6 +144,10 @@ main {
 .restaurant-item__thumbnail {
     /* width: 20%; */
     width: 100%;
+}
+
+.restaurant-item__name, .restaurant-item__city {
+    color: #ed6663;
 }
 
 /*
