@@ -30,29 +30,25 @@ body {
  */
 
 .appbar {
+    position: sticky;
     padding: 8px 16px;
     background-color: white;
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 10px;
-    position: sticky;
     top: 0;
     z-index: 99;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .appbar__brand {
-    /* font-family: 'Major Mono Display', monospace;
-    font-size: 3.5em;
-    margin: 0.5em 0.25em;
-    display: inline-block;
-    color: #424242; */
     display: flex;
     align-items: center;
 }
 
 .appbar__brand h1 {
     font-family: 'Major Mono Display', monospace;
+    margin: 0.5em 0.25em;
     color: #424242;
     text-transform: uppercase;
     font-size: 3.5em;
@@ -90,7 +86,7 @@ body {
 .appbar__menu {
     display: flex;
     align-items: center;
-  }
+}
   
 .appbar__menu > button {
     background-color: transparent;
@@ -100,32 +96,17 @@ body {
     cursor: pointer;
 }
 
-
-/*
- * Navbar
- */
-/* .nav {
-    margin-right: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav__item {
-    display: inline;
-}
-
-.nav a {
+.nav__item a {
     font-size: 1.2em;
     display: inline-block;
     padding: 1.3em;
     color: black;
 }
 
-.nav a:hover {
+.nav__item a:hover {
     color: #000;
     background-color: #4e89ae;
-} */
+}
 
 /*
  * Hero (Jumbotron)

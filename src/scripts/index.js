@@ -13,5 +13,6 @@ Doms.displayRestaurants();
 const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('#drawer'),
-  content: document.querySelector('#mainContent'),
+  content: document.querySelector('#maincontent'),
+  hero: document.querySelector('.hero'),
 });

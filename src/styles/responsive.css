@@ -1,3 +1,10 @@
+@media screen and (max-width: 649px) {
+    #drawer.open {
+        background-color: #4e89ae;
+        margin-top: 3em;
+    }
+}
+
 @media screen and (min-width: 650px) {
     .appbar {
         grid-template-columns: 1fr auto;
