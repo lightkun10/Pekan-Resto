@@ -42,7 +42,7 @@ body {
     color: #424242;
 }
 
-.appbar__menu {
+.appbar__menu button {
     font-size: 46px;
     display: block;
     margin: 10px auto;
