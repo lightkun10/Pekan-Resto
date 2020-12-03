@@ -1,16 +1,17 @@
-const HamburgerBtn = (function() {
-    // console.log("Hello from hamburger button!");
-    const _hamburgerBtn = document.querySelector("#hamburger");
-    const _drawer = document.querySelector("#drawer");
+/* eslint-disable no-underscore-dangle */
+const HamburgerBtn = (() => {
+  // console.log("Hello from hamburger button!");
+  const _hamburgerBtn = document.querySelector('#hamburger');
+  const _drawer = document.querySelector('#drawer');
 
-    let btnSet = () => {
-        _hamburgerBtn.addEventListener("click", e => {
-            _drawer.classList.toggle("open");
-            e.stopPropagation();
-        });
-    }
+  const btnSet = () => {
+    _hamburgerBtn.addEventListener('click', (e) => {
+      _drawer.classList.toggle('open');
+      e.stopPropagation();
+    });
+  };
 
-    return { btnSet }
+  return { btnSet };
 })();
 
-export { HamburgerBtn }
+export default HamburgerBtn;

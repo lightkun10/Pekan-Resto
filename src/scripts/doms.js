@@ -1,43 +1,43 @@
-import data from "../DATA.json";
+/* eslint-disable no-underscore-dangle */
+import data from '../DATA.json';
 
-const Doms = (function() {
-    // console.log("Hello from doms!")
+const Doms = (() => {
+  // console.log("Hello from doms!")
 
-    const _restaurantsSection = document.querySelector(".restaurants");
+  const _restaurantsSection = document.querySelector('.restaurants');
 
-    const displayRestaurants = () => {
-        data.restaurants.forEach(restaurant => {
-            let restoItem = document.createElement("article");
-            restoItem.className = "restaurant-item";
-                let restoImg = document.createElement("img");
-                restoImg.className = "restaurant-item__thumbnail";
-                restoImg.src = `${restaurant['pictureId']}`;
-                restoImg.setAttribute("alt", "restaurant picture");
-                
-                let restoCont = document.createElement("div");
-                restoCont.className = "restaurant-item__content";
-                    let restoRating = document.createElement("p");
-                    restoRating.className = "restaurant-item__rating";
-                    restoRating.textContent = `Rating: ${restaurant["rating"]} / 5`;
-                    let restoName = document.createElement("h1");
-                    restoName.className = "restaurant-item__name";
-                    restoName.textContent = restaurant["name"];
-                    let restoCity = document.createElement("p");
-                    restoCity.className = "restaurant-item__city";
-                    restoCity.textContent = `${restaurant["city"]}`;
-                    let restoDesc = document.createElement("p");
-                    restoDesc.className = "restaurant-item__description";
-                    restoDesc.textContent = restaurant["description"];
-                restoCont.append(restoRating, restoName, restoCity, restoDesc);
+  const displayRestaurants = () => {
+    data.restaurants.forEach((restaurant) => {
+      const restoItem = document.createElement('article');
+      restoItem.className = 'restaurant-item';
+      const restoImg = document.createElement('img');
+      restoImg.className = 'restaurant-item__thumbnail';
+      restoImg.src = `${restaurant.pictureId}`;
+      restoImg.setAttribute('alt', 'restaurant picture');
 
-                restoItem.append(restoImg, restoCont);
-    
-            _restaurantsSection.appendChild(restoItem);
-        })
-    }
-    
+      const restoCont = document.createElement('div');
+      restoCont.className = 'restaurant-item__content';
+      const restoRating = document.createElement('p');
+      restoRating.className = 'restaurant-item__rating';
+      restoRating.textContent = `Rating: ${restaurant.rating} / 5`;
+      const restoName = document.createElement('h1');
+      restoName.className = 'restaurant-item__name';
+      restoName.textContent = restaurant.name;
+      const restoCity = document.createElement('p');
+      restoCity.className = 'restaurant-item__city';
+      restoCity.textContent = `${restaurant.city}`;
+      const restoDesc = document.createElement('p');
+      restoDesc.className = 'restaurant-item__description';
+      restoDesc.textContent = restaurant.description;
+      restoCont.append(restoRating, restoName, restoCity, restoDesc);
 
-    return { displayRestaurants }
+      restoItem.append(restoImg, restoCont);
+
+      _restaurantsSection.appendChild(restoItem);
+    });
+  };
+
+  return { displayRestaurants };
 })();
 
-export { Doms }
+export default Doms;
