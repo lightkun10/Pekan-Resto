@@ -1,147 +1,72 @@
-.restaurants {
-    display: grid;
-    row-gap: 10px;
-}
-
-@media screen and (max-width: 499px) {
-    .appbar__inner {
-        width: 100%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #drawer {
-        width: 100%;
-        background-color: #4e89ae;
-        /* height: 100%; */
-        position: absolute;
-        -webkit-transform: translate(-500px, 0);
-        transform: translate(-500px, 0);
-        transition: transform 0.3s ease;
-    }
-
-    #drawer.open {
-        transform: translate(0,0);
-    }
-
-    .nav__item {
-        display: list-item;
-        list-style-type: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .restaurant-item {
-        font-size: 1.2em;
-    }
-
-    .restaurant-item__name {
-        font-size: 2.2em;
-    }
-
-    .restaurant-item__city {
-        font-size: 1.4em;
-    }
-
-    .restaurant-item__description {
-        margin-top: 1.2em;
-        font-size: 18px;
-        line-height: 1.6em;
-    }
-}
-
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
     .appbar {
-        background-color: white;
-        /* padding: 16px 24px; */
-        padding: 8px 32px;
-        display: grid;
-        /* grid-template-columns: auto 1fr; */
         grid-template-columns: 1fr auto;
+        padding: 8px 32px;
     }
-
-    .appbar__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        white-space: nowrap;
+   
+    .appbar .appbar__brand h1 {
+        font-size: 1.5em;
     }
-
-    #hamburger {
+   
+    .appbar .appbar__menu {
         display: none;
     }
-
-    .nav__list {
-        display: flex;
-        justify-content: flex-start
+   
+    .appbar .appbar__navigation {
+        position: static;
+        width: 100%;
     }
-
-    .nav__item ul > li {
-        display: inline;
+   
+    .appbar .appbar__navigation ul li {
+        display: inline-block;
     }
-
-    .nav a {
-        font-size: 1em;
+   
+    .appbar .appbar__navigation ul li a {
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        margin: 0;
     }
-
-    .restaurant-item {
-        font-size: 1.2em;
+   
+    .movies {
+        grid-template-columns: 1fr 1fr;
     }
-
-    .restaurant-item__name {
-        font-size: 2.2em;
+   
+    .movie {
+        grid-template-columns: auto 1fr;
     }
-
-    .restaurant-item__city {
-        font-size: 1.4em;
+   
+    .movie .movie__title {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
-
-    .restaurant-item__description {
-        margin-top: 1.2em;
-        font-size: 18px;
-        line-height: 1.6em;
+   
+    .movie .movie__overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
-}
-
-@media screen and (min-width: 650px) {
-    .restaurant-item__thumbnail {
-        padding: 1em;
+  }
+   
+  @media screen and (min-width: 800px) {
+    .appbar .appbar__brand h1 {
+        font-size: 2em;
     }
-
-    .restaurant-item {
-        font-size: 1.2em;
+  }
+   
+  @media screen and (min-width: 850px) {
+    .movies {
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .restaurant-item__name {
-        font-size: 2.2em;
+  }
+   
+  @media screen and (min-width: 1200px) {
+    .movies {
+        grid-template-columns: repeat(4, 1fr);
     }
-
-    .restaurant-item__city {
-        font-size: 1.4em;
+  }
+   
+  @media screen and (min-width: 1600px) {
+    .movies {
+        grid-template-columns: repeat(5, 1fr);
     }
-
-    .restaurant-item__description {
-        margin-top: 1.2em;
-        font-size: 17px;
-        line-height: 1.6em;
-    }
-}
-
-@media screen and (min-width: 700px) {
-    .restaurants {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 30px;
-        row-gap: 15px;
-    }
-
-    
-}
-
-@media screen and (min-width: 1200px) {
-    main {
-        max-width: 1200px;
-    }
-}
+  }
