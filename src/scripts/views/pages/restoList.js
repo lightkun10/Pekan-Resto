@@ -1,5 +1,5 @@
 import DicodingSource from '../../data/dicoding-source';
-import restoItemTemplate from '../templates/template-creator';
+import { restoItemTemplate, restoDetailTemplate } from '../templates/template-creator';
 
 const RestoList = {
 

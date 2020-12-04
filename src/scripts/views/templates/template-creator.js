@@ -1,4 +1,14 @@
+/* eslint-disable no-underscore-dangle */
 import CONFIG from '../../globals/config';
+
+const _showCategories = (categories) => {
+  const p = document.createElement('p');
+  categories.forEach((category) => {
+    p.innerHTML += `${category.name} `;
+  });
+
+  return p;
+};
 
 const restoItemTemplate = (resto) => `
   <div class="resto-item">
@@ -16,5 +26,16 @@ const restoItemTemplate = (resto) => `
   </div>
 `;
 
-// export { restoItemTemplate };
-export default restoItemTemplate;
+const restoDetailTemplate = (resto) => `
+  <h2 class="resto__name">${resto.name}</h2>
+  <img class="resto__img" src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
+  <div class="resto__info">
+    <h3>Information</h3>
+    <h4>Address</h4>
+    <p>${resto.address}</p>
+    <h4>Categories</h4>
+    ${_showCategories(resto.categories).innerHTML}
+  </div>
+`;
+
+export { restoItemTemplate, restoDetailTemplate };
