@@ -1,5 +1,7 @@
-const Detail = {
+import DicodingSource from '../../data/dicoding-source';
+import UrlParser from '../../routes/url-parser';
 
+const Detail = {
   async render() {
     return `
       <h2>Detail Page</h2>
@@ -7,7 +9,9 @@ const Detail = {
   },
 
   async afterRender() {
-    // Called after render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const resto = await DicodingSource.detailResto(url.id);
+    console.log(resto);
   },
 
 };

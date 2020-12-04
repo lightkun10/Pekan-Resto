@@ -1,3 +1,5 @@
+import DicodingSource from '../../data/dicoding-source';
+
 const RestoList = {
 
   async render() {
@@ -7,7 +9,8 @@ const RestoList = {
   },
 
   async afterRender() {
-    // Called after render()
+    const restos = await DicodingSource.restoList();
+    console.log(restos);
   },
 
 };
