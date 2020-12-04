@@ -11,6 +11,10 @@ a {
     color: inherit;
 }
 
+li {
+    list-style-type: none;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -61,7 +65,7 @@ body {
     left: -180px;
     width: 150px;
     transition: all 0.3s;
-    padding: 8px;
+    padding: 38px;
     background-color: white;
     overflow: hidden;
 }
@@ -91,7 +95,7 @@ body {
 .appbar__menu > button {
     background-color: transparent;
     border: none;
-    font-size: 18px;
+    font-size: 38px;
     padding: 8px;
     cursor: pointer;
 }

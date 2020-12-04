@@ -1,7 +1,12 @@
 @media screen and (max-width: 649px) {
     #drawer.open {
-        background-color: #4e89ae;
-        margin-top: 3em;
+        /* background-color: #4e89ae; */
+        background-color: #ffa372;
+        margin-top: 4.8em;
+    }
+
+    .appbar .appbar__navigation {
+        padding: 18px;
     }
 }
 
@@ -12,7 +17,7 @@
     }
    
     .appbar .appbar__brand h1 {
-        font-size: 1.5em;
+        font-size: 3.5em;
     }
    
     .appbar .appbar__menu {
@@ -56,7 +61,7 @@
    
   @media screen and (min-width: 800px) {
     .appbar .appbar__brand h1 {
-        font-size: 2em;
+        font-size: 3.2em;
     }
   }
    
@@ -66,11 +71,14 @@
     }
   }
    
-  /* @media screen and (min-width: 1200px) {
-    .restaurants {
+  @media screen and (min-width: 1200px) {
+    /* .restaurants {
         grid-template-columns: repeat(4, 1fr);
+    } */
+    main {
+        max-width: 1200px;
     }
-  } */
+  }
    
   /* @media screen and (min-width: 1600px) {
     .restaurants {
