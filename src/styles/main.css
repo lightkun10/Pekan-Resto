@@ -11,9 +11,9 @@ a {
     color: inherit;
 }
 
-li {
+/* #restaurants li {
     list-style-type: none;
-}
+} */
 
 body, html {
     margin: 0;
@@ -74,9 +74,12 @@ body {
     left: 0;
 }
 
+.appbar .appbar__navigation ul li {
+    list-style-type: none;
+}
+
 .appbar .appbar__navigation ul li a {
     display: inline-block;
-    text-decoration: none;
     color: black;
     padding: 8px;
     margin-bottom: 5px;
@@ -236,6 +239,37 @@ main {
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
+
+/*
+ * Resto (for detail page)
+ *
+ */
+.resto {
+    margin: 0 auto;
+    width: 100%;
+    /* max-width: 800px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+}
+
+.resto .resto__img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.resto .resto__info h4 {
+    margin: 8px 0;
+}
+
+.resto > .resto__menus > h3 {
+    margin-bottom: 0.5em;
+}
+
+.resto > .resto__menus > div {
+    margin-bottom: 2em;
+}
+
 
 /*
  * Footer

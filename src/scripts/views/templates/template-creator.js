@@ -1,15 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import CONFIG from '../../globals/config';
 
-const _showCategories = (categories) => {
-  const p = document.createElement('p');
-  categories.forEach((category) => {
-    p.innerHTML += `${category.name} `;
-  });
-
-  return p;
-};
-
 const restoItemTemplate = (resto) => `
   <div class="resto-item">
     <div class="resto-item__header">
@@ -30,12 +21,36 @@ const restoDetailTemplate = (resto) => `
   <h2 class="resto__name">${resto.name}</h2>
   <img class="resto__img" src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
   <div class="resto__info">
-    <h3>Information</h3>
-    <h4>Address</h4>
+    <h3>Address</h3>
     <p>${resto.address}</p>
-    <h4>Categories</h4>
-    ${_showCategories(resto.categories).innerHTML}
+    <h3>Categories</h3>
+    ${resto.categories.map((category) => `${category.name}`).join(', ')}
+    <h4>Rating</h4>
+    <p>${resto.rating}</p>
   </div>
+
+  <div class="resto__menus">
+    <h3>Menus</h3>
+    <div class="resto__menus__foods">
+      <h4>Foods:</h4>
+      <ul>${resto.menus.foods.map((food) => `<li class="resto__menus__food">${food.name}</li>`).join('')}</ul>
+    </div>
+    <div class="resto__menus__drinks">
+      <h4>Drinks:</h4>
+      <ul>${resto.menus.drinks.map((drink) => `<li class="resto__menus__drink">${drink.name}</li>`).join('')}</ul>
+    </div>
+  </div>
+
+  <div class="resto__reviews">
+    <h3>Reviews</h3>
+    ${resto.customerReviews.map((review) => `
+      <div class="resto__review">
+        ${review.date}
+        <strong>${review.name}</strong>
+        ${review.review}
+      </div>
+    `).join('')}
+  <div>
 `;
 
 export { restoItemTemplate, restoDetailTemplate };
