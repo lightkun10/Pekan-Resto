@@ -1,6 +1,7 @@
-/* eslint-disable no-underscore-dangle */
 const DrawerInitiator = {
-  init({ button, drawer, content, hero }) {
+  init({
+    button, drawer, content, hero,
+  }) {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, drawer);
     });

@@ -1,6 +1,4 @@
-/* eslint-disable no-underscore-dangle */
 const HamburgerBtn = (() => {
-  // console.log("Hello from hamburger button!");
   const _hamburgerBtn = document.querySelector('#hamburger');
   const _drawer = document.querySelector('#drawer');
 

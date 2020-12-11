@@ -11,10 +11,6 @@ a {
     color: inherit;
 }
 
-/* #restaurants li {
-    list-style-type: none;
-} */
-
 body, html {
     margin: 0;
     padding: 0;
@@ -106,13 +102,17 @@ body {
 .nav__item a {
     font-size: 1.2em;
     display: inline-block;
-    padding: 1.3em;
     color: black;
 }
 
 .nav__item a:hover {
     color: #000;
-    background-color: #4e89ae;
+    /* background-color: #4e89ae; */
+    background-color: #ed6663;
+}
+
+.appbar .appbar__navigation ul li a {
+    padding: 0.8em;
 }
 
 /*
@@ -167,11 +167,6 @@ main {
  * Restaurants
  */
 .restaurants {
-    /* margin: 32px 1em auto;
-    text-align: left; */
-
-    /* padding: 32px;
-    flex: 1; */
     display: grid;
     grid-template-columns: 1fr;
     gap: 2em;
@@ -203,6 +198,11 @@ main {
 
 .resto-item .resto-item__header .resto-item__header__thumbnail {
     width: 100%;
+
+    /* Make the size of all image the same. */
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .resto-item .resto-item__header .resto-item__header__rating {
@@ -230,6 +230,7 @@ main {
 .resto-item .resto-item__content h3 a {
     color: #ed6663;
     text-decoration: none;
+    font-size: 38px;
 }
 
 .resto-item .resto-item__content p {
@@ -240,6 +241,11 @@ main {
     -webkit-box-orient: vertical;
 }
 
+.resto-item .resto-item__content .resto-item__content__city {
+    color: #ed6663;
+    margin-bottom: 0.8em;
+}
+
 /*
  * Resto (for detail page)
  *
@@ -247,10 +253,15 @@ main {
 .resto {
     margin: 0 auto;
     width: 100%;
-    /* max-width: 800px; */
+    /* max-width: 1000px; */
     display: grid;
     grid-template-columns: 1fr;
     gap: 18px 16px;
+    padding: 2em;
+}
+
+.resto > h2, h3 {
+    color: #ed6663;
 }
 
 .resto .resto__img {
@@ -258,9 +269,13 @@ main {
     max-width: 500px;
 }
 
-.resto .resto__info h4 {
-    margin: 8px 0;
+.resto .resto__info > div {
+    margin: 2em 0;
 }
+
+/* .resto .resto__info h4 {
+    margin: 8px 0;
+} */
 
 .resto > .resto__menus > h3 {
     margin-bottom: 0.5em;
@@ -268,6 +283,22 @@ main {
 
 .resto > .resto__menus > div {
     margin-bottom: 2em;
+}
+
+.resto > .resto__menus > .resto__menus__foods > ul > li,
+.resto__menus__drinks > ul > li {
+    list-style-type: circle;
+}
+
+.resto > .resto__reviews > h3 {
+    margin-bottom: 10px;
+}
+
+.resto > .resto__reviews > .resto__review {
+    /* margin: 2em 0 auto; */
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-multiple-empty-lines */
 import { openDB } from 'idb';
 import CONFIG from '../globals/config';
 
@@ -9,7 +8,6 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
     database.createObjectStore(OBJECT_STORE_NAME, { keyPath: 'id' });
   },
 });
-
 
 const FavoriteRestoIdb = {
   async getResto(id) {

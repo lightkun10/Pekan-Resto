@@ -1,9 +1,6 @@
-/* eslint-disable no-underscore-dangle */
 import data from '../DATA.json';
 
 const Doms = (() => {
-  // console.log("Hello from doms!")
-
   const _restaurantsSection = document.querySelector('.restaurants');
 
   const displayRestaurants = () => {

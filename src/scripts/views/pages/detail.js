@@ -21,13 +21,15 @@ const Detail = {
     const likeButtonContainer = document.querySelector('#likeButtonContainer');
     likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
-    LikeButtonInitiator.init({
+    await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       resto: {
         id: resto.restaurant.id,
         name: resto.restaurant.name,
+        city: resto.restaurant.city,
         description: resto.restaurant.description,
         address: resto.restaurant.address,
+        pictureId: resto.restaurant.pictureId,
         categories: resto.restaurant.categories,
         menus: resto.restaurant.menus,
         rating: resto.restaurant.rating,

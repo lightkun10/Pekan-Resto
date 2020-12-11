@@ -2,7 +2,6 @@ import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
-/* eslint-disable no-underscore-dangle */
 class App {
   constructor({
     button, drawer, content, hero,

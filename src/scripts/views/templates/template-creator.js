@@ -1,17 +1,18 @@
-/* eslint-disable no-underscore-dangle */
 import CONFIG from '../../globals/config';
 
 const restoItemTemplate = (resto) => `
   <div class="resto-item">
     <div class="resto-item__header">
       <img class="resto-item__header__thumbnail" alt="${resto.name}"
-        src="${CONFIG.BASE_IMAGE_SMALL_URL}${resto.pictureId}">
+        src="${CONFIG.BASE_IMAGE_SMALL_URL}${resto.pictureId}"
+        crossorigin="anonymous">
         <div class="resto-item__header__rating">
           <p>⭐️<span class="resto-item__header__rating__score">${resto.rating}</span></p>
         </div>
     </div>
     <div class="resto-item__content">
         <h3><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
+        <h4 class="resto-item__content__city">${resto.city}</h4>
         <p>${resto.description}</p>
     </div>
   </div>
@@ -19,14 +20,21 @@ const restoItemTemplate = (resto) => `
 
 const restoDetailTemplate = (resto) => `
   <h2 class="resto__name">${resto.name}</h2>
-  <img class="resto__img" src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}">
+  <img class="resto__img" src="${CONFIG.BASE_IMAGE_MEDIUM_URL + resto.pictureId}" alt="${resto.name}" crossorigin="anonymous">
   <div class="resto__info">
-    <h3>Address</h3>
-    <p>${resto.address}</p>
-    <h3>Categories</h3>
-    ${resto.categories.map((category) => `${category.name}`).join(', ')}
-    <h4>Rating</h4>
-    <p>${resto.rating}</p>
+    <div class="resto__info__address">
+      <h3>Address</h3>
+      <h4>${resto.city}</h4>
+      <p>${resto.address}</p>
+    </div>
+    <div class="resto__info__categories">
+      <h3>Categories</h3>
+      ${resto.categories.map((category) => `${category.name}`).join(', ')}
+    </div>
+    <div class="resto__info__rating">
+      <h3>Rating</h3>
+      <p>⭐️${resto.rating}</p>
+    </div>
   </div>
 
   <div class="resto__menus">
@@ -45,9 +53,9 @@ const restoDetailTemplate = (resto) => `
     <h3>Reviews</h3>
     ${resto.customerReviews.map((review) => `
       <div class="resto__review">
-        ${review.date}
-        <strong>${review.name}</strong>
-        ${review.review}
+        <div class="resto__review__date">${review.date}</div>
+        <div class="resto__review__name"><strong>${review.name}</strong></div>
+        <div class="resto__review__content">${review.review}</div>
       </div>
     `).join('')}
   <div>
@@ -58,7 +66,7 @@ const createLikeButtonTemplate = () => `
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
- 
+
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this resto" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
