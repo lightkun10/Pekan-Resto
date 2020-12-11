@@ -11,8 +11,8 @@ const restoItemTemplate = (resto) => `
         </div>
     </div>
     <div class="resto-item__content">
-        <h3><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h3>
-        <h4 class="resto-item__content__city">${resto.city}</h4>
+        <h2><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h2>
+        <h3 class="resto-item__content__city">${resto.city}</h3>
         <p>${resto.description}</p>
     </div>
   </div>
